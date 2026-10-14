@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const productRoutes = require('./routes/products');
+const authRoutes = require('./routes/auth');
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
   res.send('StoreSense is ready to grow');
 });
 
+app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 
 app.listen(5000, () => {
