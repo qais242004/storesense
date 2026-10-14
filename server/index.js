@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/sales', salesRoutes);
+app.use('/api/dashboard', dashboardRoutes);
 
 app.listen(5000, () => {
   console.log('Server started on port 5000');
