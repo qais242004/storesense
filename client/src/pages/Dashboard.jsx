@@ -36,23 +36,10 @@ function Dashboard() {
     loadSummary();
   }, [navigate]);
 
-  const logout = () => {
-    localStorage.removeItem('token');
-    navigate('/login');
-  };
-
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       <div className="mx-auto max-w-4xl">
-        <div className="mb-6 flex items-center justify-between">
-          <h1 className="text-3xl font-bold text-blue-700">Dashboard</h1>
-          <button
-            onClick={logout}
-            className="rounded-lg bg-gray-700 px-4 py-2 text-white hover:bg-gray-800"
-          >
-            Logout
-          </button>
-        </div>
+        <h1 className="mb-6 text-3xl font-bold text-blue-700">Dashboard</h1>
 
         {error && (
           <p className="mb-4 rounded bg-red-100 px-3 py-2 text-red-700">{error}</p>

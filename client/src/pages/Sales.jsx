@@ -79,15 +79,7 @@ function Sales() {
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       <div className="mx-auto max-w-xl">
-        <div className="mb-6 flex items-center justify-between">
-          <h1 className="text-3xl font-bold text-blue-700">Sale likhein</h1>
-          <button
-            onClick={() => navigate('/dashboard')}
-            className="rounded-lg bg-gray-700 px-4 py-2 text-white hover:bg-gray-800"
-          >
-            Dashboard
-          </button>
-        </div>
+        <h1 className="mb-6 text-3xl font-bold text-blue-700">Sale likhein</h1>
 
         <form onSubmit={handleSell} className="rounded-xl bg-white p-6 shadow">
           {message && (
